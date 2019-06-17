@@ -2,19 +2,23 @@
 
 _Single Page Application for Eventbrite, using React. The app, is about an event interface using the [Public Eventbrite API](https://www.eventbrite.com/platform/api), which allows filtering by city and type of event. Next, the structure of application components:_
 
-![App's components diagram](components.png)
+<p align="center">
+  <img height="300" src="./components.png" alt="App's components diagram">
+</p>
 
 ## Starting 🚀
 
 _These instructions will allow you to obtain a copy of the project on your local machine for development and testing purposes._
 
-1. Clone the repository: git clone https://github.com/Adalab/fairfax-m4-eventbrite-eventos
+1. You need to install [Node 10.16.0 & npm 6.9.0](https://nodejs.org/es/download/).
 
-2. You can also Fork the project so you'll have it on your GitHub profile.
+2. Clone the repository: `$ git clone https://github.com/Adalab/fairfax-m4-eventbrite-eventos`. You can also Fork the project so you'll have it on your GitHub profile.
 
-3. To launch the project and see it in the browser: npm start
+3. Install dependencies with `$ npm install`.
 
-4. To add and upload the changes you make: `git add .` / `git commit -m 'message'` / `git push origin 'name-of-the-branch'`
+4. To launch the project and see it in the browser, run `$ npm start`.
+
+5. To add and upload the changes you make: `git add .` / `git commit -m 'message'` / `git push origin 'name-of-the-branch'`
 
 ### Requirements 📋
 
@@ -26,19 +30,28 @@ _To use the application you must have the following:_
 ```
 REACT_APP_API_KEY = put-here-your-API-key
 ```
-
 3. It's ready! You already have access to Eventbrite's list of events!
 
 ## Built with 🛠️
 
-_This project is created with [Create React App](https://github.com/facebook/create-react-app)._
->- You can learn more in [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
->- To learn React, take a look at the [React's documentation](https://reactjs.org/).
+### Dependencies
 
-_We use [Node 10.16.0 & npm 6.9.0](https://nodejs.org/es/download/)_
+- [node-sass 4.12.0](https://www.npmjs.com/package/node-sass)
+- [prop-types 15.7.2](https://www.npmjs.com/package/prop-types)
+- [react 16.8.6](https://www.npmjs.com/package/react)
+- [react-dom 16.8.6](https://www.npmjs.com/package/react-dom)
+- [react-scripts 3.0.1](https://www.npmjs.com/package/react-scripts)
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+### Development dependencies
 
+- [eslint-config-airbnb 17.1.0](https://www.npmjs.com/package/eslint-config-airbnb)
+- [eslint-config-prettier 4.1.0](https://www.npmjs.com/package/eslint-config-prettier)
+- [eslint-plugin-import 2.16.0](https://www.npmjs.com/package/eslint-plugin-import)
+- [eslint-plugin-jsx-a11y 6.2.1](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
+- [eslint-plugin-prettier 3.1.0](https://www.npmjs.com/package/eslint-plugin-prettier)
+- [eslint-plugin-react 7.12.4](https://www.npmjs.com/package/eslint-plugin-react)
+- [pre-commit 1.2.2](https://www.npmjs.com/package/pre-commit)
+- [prettier 1.16.4](https://www.npmjs.com/package/prettier)
 
 ## Authors ✒️
 
