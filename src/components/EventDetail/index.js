@@ -128,9 +128,8 @@ class EventDetail extends PureComponent {
 
 EventDetail.propTypes = {
   loading: PropTypes.bool.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  dataArr: PropTypes.object.isRequired,
-  match: PropTypes.objectOf(PropTypes.string, PropTypes.bool).isRequired,
+  dataArr: PropTypes.instanceOf(api).isRequired,
+  match: PropTypes.instanceOf(EventDetail).isRequired,
 };
 
 export default EventDetail;

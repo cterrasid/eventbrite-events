@@ -8,16 +8,13 @@
   }
 
   &__title {
+    @include fontConfig($darkBlue, 32px, 45px);
     max-width: 173px;
     padding-bottom: 24px;
-    font-size: 32px;
-    color: $darkBlue;
     text-align: left;
-    line-height: 45px;
 
     @media all and (min-width: $tablet) {
-      font-size: 56px;
-      line-height: 72px;
+      @include fontConfig(inherit, 56px, 72px);
       max-width: 680px;
     }
   }
@@ -26,75 +23,62 @@
 .card-list__section {
   border-top: 1px solid $lightGrey;
   @media all and (min-width: $tablet) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-}
-
-.circle {
-  width: 104px;
-  height: 261px;
-  overflow: hidden;
-  position: absolute;
-  top: -10px;
-  right: 0;
-  z-index: -10;
-  @media all and (min-width: $tablet) {
-    width: 680px;
-    height: 350px;
-    top: auto;
-    bottom: 0;
-    left: -153px;
-  }
-  @media all and (min-width: $desktop) {
-    width: 937px;
-    height: 488px;
-    top: auto;
-    bottom: 0;
-    left: -237px;
-  }
-  &--back {
-    height: 176px;
-    width: 176px;
-    border-radius: 50%;
-    background-image: url(../../img/mapa.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    @media all and (min-width: $tablet) {
-      height: 479px;
-      width: 479px;
-    }
-    @media all and (min-width: $desktop) {
-      height: 679px;
-      width: 679px;
-    }
-  }
-
-  &--front {
-    height: 184px;
-    width: 184px;
-    border-radius: 50%;
-    background-color: $freeSalmon;
-    position: absolute;
-    top: 77px;
-    left: 51px;
-    @media all and (min-width: $tablet) {
-      height: 612px;
-      width: 612px;
-      top: 225px;
-      left: 115px;
-    }
-    @media all and (min-width: $desktop) {
-      height: 812px;
-      width: 812px;
-      top: 310px;
-      left: 193px;
-    }
+    @include flexContainer(flex, flex-end, flex-end, unset);
   }
 }
 
 .hidden__card-list {
   display: none;
 }
+
+.circle {
+  @include boxSize(261px, 104px);
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: -10;
+  @media all and (min-width: $tablet) {
+    @include boxSize(350px, 680px);
+    top: auto;
+    bottom: 0;
+    left: -153px;
+  }
+  @media all and (min-width: $desktop) {
+    @include boxSize(488px, 937px);
+    top: auto;
+    bottom: 0;
+    left: -237px;
+  }
+  &__back {
+    @include boxSize(176px, 176px);
+    @include backgroundConfig(url(../../img/mapa.png), no-repeat, center, cover);
+    border-radius: 50%;
+    @media all and (min-width: $tablet) {
+      @include boxSize(479px, 479px);
+    }
+    @media all and (min-width: $desktop) {
+      @include boxSize(679px, 679px);
+    }
+  }
+
+  &__front {
+    @include boxSize(184px, 184px);
+    border-radius: 50%;
+    background-color: $freeSalmon;
+    position: absolute;
+    top: 77px;
+    left: 51px;
+    @media all and (min-width: $tablet) {
+      @include boxSize(612px, 612px);
+      top: 225px;
+      left: 115px;
+    }
+    @media all and (min-width: $desktop) {
+      @include boxSize(812px, 812px);
+      top: 310px;
+      left: 193px;
+    }
+  }
+}
+

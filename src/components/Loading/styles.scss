@@ -1,4 +1,5 @@
 @import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
 
 .loading__container {
     text-align: center;
@@ -8,15 +9,14 @@
 .lds-facebook {
   display: inline-block;
   position: relative;
-  width: 64px;
-  height: 64px;
+  @include boxSize(64px, 64px);
 }
 .lds-facebook div {
   display: inline-block;
   position: absolute;
   left: 6px;
   width: 13px;
-  background: $mediumOrange;
+  background: $coolOrange;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .lds-facebook div:nth-child(1) {
