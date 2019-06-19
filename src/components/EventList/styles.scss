@@ -1,0 +1,32 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.scss';
+
+.event-list{
+  &__container {
+  @include flexContainer(flex, flex-start, center, column);
+    @media all and (min-width: $tablet) {
+      @include mainListMargin;
+      @include boxSize(55vh, unset);
+      overflow-y: scroll;
+      margin-bottom: 0;
+      margin-top: 40px;
+    }
+    @media all and (min-width: $desktop) {
+      @include gridContainer(grid, 328px 328px, 1fr 1fr, 22px, 30x);
+      @include mainListMargin;
+      @include boxSize(430px, unset);
+      overflow-y: scroll;
+      margin-bottom: 0;
+    }
+  }
+  &__btn-results {
+    @include boxSize(unset, 272px);
+    background-color: $mediumOrange;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 74px;
+    padding: 12px;
+    color: $whiteGhost;
+    font-size: 14px;
+  }
+}

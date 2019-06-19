@@ -1,68 +1,53 @@
 @import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
 
-.card__container {
+.event-card{
+  &__container {
+    @include flexContainer(flex, unset, unset, column);
+    @include boxSize(246px, 272px);
     margin: 24px auto;
-    display: flex;
-    flex-direction: column;
     text-align: left;
     box-shadow: 0 4px 12px 0 rgba(46, 55, 77, 0.16);
-    height: 276px;
-    width: 272px;
-    margin-top: 24px;
-    margin-bottom: 0;
     @media all and (min-width: $tablet) {
-        margin-top: 0;
-        margin-bottom: 24px;
+        margin-top: 0 0 24px 0;
     }
     @media all and (min-width: $desktop) {
         width: 100%;
     }
-}
+  }
 
-.card__event-date {
-    font-size: 14px;
-    margin-bottom: 4px;
-    line-height: 22px;
-    color: $mediumGrey;
-}
-
-.card__event-name {
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.5px;
-    color: $darkBlue;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    &:hover {
-        color: $blueKing;
-    }
-}
-
-.card__event-place {
-    font-size: 14px;
-    line-height: 22px;
-    color: $mediumGrey;
-    margin-top: 8px;
-}
-
-.img__container {
+  &__img {
+    @include boxSize(100%, 100%);
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 100%;
-    height: 50%;
-}
+  }
 
-.info__container {
+  &__info-container{
+    @include flexContainer(flex, center, unset, column);
+    @include boxSize(50%, unset);
     background-color: $whiteGhost;
-    padding-left:  24px;
-    padding-right: 24px;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.venue {
-margin-right: 4px;
+    padding:  0 24px 0 24px;
+  }
+
+  &__date {
+    @include fontConfig($mediumGrey, 14px, 22px);
+    margin-bottom: 4px;
+  }
+
+  &__name {
+      @include fontConfig($darkBlue, 18px, 22px);
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      &:hover {
+          color: $blueKing;
+      }
+  }
+
+  &__place {
+    @include fontConfig($mediumGrey, 14px, 22px);
+    margin-top: 8px;
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardEventList from '../CardEventList';
+import EventList from '../EventList';
 import './styles.scss';
 import Loading from '../Loading';
 
@@ -22,7 +22,7 @@ const HomePage = props => {
       </header>
       {loading && <Loading classLoading="loading__container" />}
       <section className={cardClasses}>
-        <CardEventList data={dataArr} moreResultsClick={moreResultsClick} />
+        <EventList data={dataArr} moreResultsClick={moreResultsClick} />
       </section>
     </div>
   );

@@ -27,15 +27,15 @@ const EventCard = props => {
   const numDay = date.getDate();
   const formatedDate = `${dayWeek}, ${month} ${numDay} `;
   return (
-    <div className="card__container">
+    <div className="event-card__container">
       <div
-        className="img__container"
+        className="event-card__img"
         style={{ backgroundImage: `url(${eventImage})` }}
       />
-      <div className="info__container">
-        <p className="card__event-date">{formatedDate}</p>
-        <h2 className="card__event-name">{eventName}</h2>
-        <p className="card__event-place">{`${eventPlace}, Madrid`}</p>
+      <div className="event-card__info-container">
+        <p className="event-card__date">{formatedDate}</p>
+        <h2 className="event-card__name">{eventName}</h2>
+        <p className="event-card__place">{`${eventPlace}, Madrid`}</p>
       </div>
     </div>
   );

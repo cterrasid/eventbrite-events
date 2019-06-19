@@ -1,12 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Route, Switch } from 'react-router-dom';
-
 import api from '../../api/eb-api';
-
-import './styles.scss';
-
 import HomePage from '../HomePage';
-import DetailEvent from '../DetailEvent';
+import EventDetail from '../EventDetail';
+import './styles.scss';
 
 class App extends PureComponent {
   constructor(props) {
@@ -37,9 +34,8 @@ class App extends PureComponent {
           return {
             events: [...oldEvents, ...newEvents],
             isFetching: false,
-          }
-        }
-        ),
+          };
+        }),
       );
   };
 
@@ -48,14 +44,14 @@ class App extends PureComponent {
     return events.find(event => event.id === id);
   }
 
-  handleMoreResultsClick(event) {
+  handleMoreResultsClick() {
     const { currentPage } = this.state;
     const nextCurrentPage = currentPage + 1;
 
     this.setState({
       currentPage: nextCurrentPage,
       isFetching: true,
-    })
+    });
     this.getEvents(nextCurrentPage);
   }
 
@@ -63,17 +59,23 @@ class App extends PureComponent {
     const { events, isFetching } = this.state;
 
     return (
-      <div className="App">
+      <div>
         <Switch>
           <Route
             exact
             path="/"
-            render={() => <HomePage dataArr={events} loading={isFetching} moreResultsClick={this.handleMoreResultsClick} />}
+            render={() => (
+              <HomePage
+                dataArr={events}
+                loading={isFetching}
+                moreResultsClick={this.handleMoreResultsClick}
+              />
+            )}
           />
           <Route
             path="/detail/:id"
             render={routerProps => (
-              <DetailEvent
+              <EventDetail
                 loading={isFetching}
                 match={routerProps.match}
                 dataArr={this.detailEvent(routerProps.match.params.id)}
@@ -81,7 +83,7 @@ class App extends PureComponent {
             )}
           />
         </Switch>
-      </div >
+      </div>
     );
   }
 }
