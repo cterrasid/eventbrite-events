@@ -1,10 +1,27 @@
+<p align="center">
+  <img height="150" src="./eventbrite.png" alt="Eventbrite logo">
+</p>
+
 # Eventbrite event interface
 
 _Single Page Application for Eventbrite, using React. The app, is about an event interface using the [Public Eventbrite API](https://www.eventbrite.com/platform/api), which allows filtering by city and type of event. Next, the structure of application components:_
+```
+/
+`-_src
+    |-api
+    |-components
+        |-App
+        |-Homepage
+            |-EventList
+            |-EventCard
+            |-Loading
+        |-EventDetail
+            |-Purchase
+    |-img
+    |-scss
+```
 
-<p align="center">
-  <img height="300" src="./components.png" alt="App's components diagram">
-</p>
+## 👩🏻‍💻 Authors 
 
 ## Starting 🚀
 
