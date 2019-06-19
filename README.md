@@ -39,7 +39,7 @@ _These instructions will allow you to obtain a copy of the project on your local
 
 _To use the application you must have the following:_
 
-1. An API key, which you can obtain through the following [link](https://www.eventbrite.com/platform/)
+1. An API key, which you can obtain through the following <a href="https://www.eventbrite.com/platform/" target="blank">link</a>
 
 2. In the root of the project, you must create an `.env` file, in which, you must write the following:
 ```
@@ -67,6 +67,10 @@ REACT_APP_API_KEY = put-here-your-API-key
 - [eslint-plugin-react 7.12.4](https://www.npmjs.com/package/eslint-plugin-react)
 - [pre-commit 1.2.2](https://www.npmjs.com/package/pre-commit)
 - [prettier 1.16.4](https://www.npmjs.com/package/prettier)
+
+## License 📄
+
+This project is under MIT License - check [LICENSE.md](LICENSE.md) for details
 
 ## Authors 👩🏻‍💻
 
