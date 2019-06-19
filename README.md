@@ -21,8 +21,6 @@ _Single Page Application for Eventbrite, using React. The app, is about an event
     |-scss
 ```
 
-## 👩🏻‍💻 Authors 
-
 ## Starting 🚀
 
 _These instructions will allow you to obtain a copy of the project on your local machine for development and testing purposes._
@@ -70,7 +68,7 @@ REACT_APP_API_KEY = put-here-your-API-key
 - [pre-commit 1.2.2](https://www.npmjs.com/package/pre-commit)
 - [prettier 1.16.4](https://www.npmjs.com/package/prettier)
 
-## Authors ✒️
+## Authors 👩🏻‍💻
 
 * **Irene Fuente** - [ifuenteromero](https://www.linkedin.com/in/ifuenteromero)
 * **Irene Gómez** - [irene-gomez](https://www.linkedin.com/in/irenegf)
