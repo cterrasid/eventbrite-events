@@ -1,8 +1,27 @@
 @mixin flexContainer($display, $justifyContent, $alignItems, $flexDirection) {
-    display: $display;
-    justify-content: $justifyContent;
-    align-items: $alignItems;
-    flex-direction: $flexDirection;
+  display: $display;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+@mixin gridContainer($display, $gridTempCol, $gridTempRows, $gridColGap, $gridRowGap) {
+  display: $display;
+  grid-template-columns: $gridTempCol;
+  grid-template-rows: $gridTempRows;
+  grid-column-gap: $gridColGap;
+  grid-row-gap: $gridRowGap;
+}
+
+@mixin boxSize($height, $width){
+  height: $height;
+  width: $width;
+}
+
+@mixin fontConfig($color, $fontSize, $lineHeight){
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
 }
 
 @mixin mainListMargin {
