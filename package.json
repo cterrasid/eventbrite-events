@@ -1,5 +1,4 @@
-{ "homepage": "./",
-  "name": "adalab-boiler-plate",
+{ "name": "adalab-boiler-plate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +11,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.1"
   },
+ "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
